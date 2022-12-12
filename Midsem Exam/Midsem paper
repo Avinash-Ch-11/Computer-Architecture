@@ -1,0 +1,62 @@
+question 1:
+
+Is there a limit to the number of recursive function calls that your program can make? Why so?
+
+question 2:
+
+Consider a program that has 40% loads and 20% conditional branches. 50% of the load instructions suffer from a load-use hazard, and 40% of the branches are taken. Let us run this program on two processors P1 and P2. Both P1 and P2 are five-stage pipelines with value forwarding as studied in class, and run at the same frequency. P1 does not have any dedicated branch predictor -- so it always predicts not-taken. P2 has a dedicated branch predictor. For this program, its accuracy for the taken branches is 50%, and for the not-taken branches is 70%. Which processor performs better?
+
+question 3:
+
+Consider the following two SimpleRISC code snippets. Data hazards have to be handled in hardware. Let us consider two processors A and B: A supports only data interlocks, while B supports data interlocks and value forwarding. In each processor, in which cycle will the final instruction pass through the RW stage? Give the pipeline diagram in each case. (Assume the first instruction is in IF stage in cycle 1 in each case).
+
+(i)
+
+[1] st r3, 24[r1]
+
+[2] ld r4, 24[r1]
+
+(ii)
+
+[1] add r1, r1, r2
+
+[2] sub r3, r1, r4
+
+[3] add r4, r5, r6
+
+
+question 4:
+
+In the pipeline studied in class, the maximum achievable throughput was 1 instruction per cycle. Consider the following code snippet:
+
+[1] add r1, r2, r3
+
+[2] add r4, r5, r6
+
+[3] add r2, r1, r3
+
+[4] add r5, r4, r6
+
+[5] add r1, r2, r3
+
+[6] add r4, r5, r6
+
+[7] add r2, r1, r3
+
+[8] add r5, r4, r6
+
+[9] add r1, r2, r3
+
+[10] add r4, r5, r6
+
+[11] add r2, r1, r3
+
+[12] add r5, r4, r6
+
+
+(i) Analyzing purely from a data dependence point of view, what is the maximum throughput achievable for this code snippet? (Hint: Try to analyze in terms of the data dependencies in the program -- do not let your knowledge of the pipeline influence you. )
+
+
+(ii) But the pipeline we have studied in class maxes out at an IPC of 1, and cannot do better.  How can we change our pipeline to achieve this higher throughput? (Remember: functional correctness must not be compromised!)
+
+

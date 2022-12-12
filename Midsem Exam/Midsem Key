@@ -1,0 +1,16 @@
+Q1) Every time a function is called, an activation blok is created for it on the top of the stack. This activation block is destroyed only when the function returns. Thus, when there is a function recursively calling itself, the number of activation blocks goes on increasing. Since the stack is allocated in the memory, and since the memory is of finite size (2^32 bytes in a 32-bit byte addressable memory system), an infinite recursive call will result in the stack filling up, and the program cannot execute further.
+
+Q2)
+CPI of P1 = 1 + (0.4 * 0.5 * 1) + (0.2 * 0.4 * 2) = 1.36
+CPI of P2 = 1 + (0.4 * 0.5 * 1) + (0.2 * 0.4 * 0.5 * 2) + (0.2 * 0.6 * 0.3 * 2) = 1.352
+So P2 is better
+
+Q3)
+(i) Processor A: 6th cycle; Processor B: 6th cycle
+(ii) Processor A: 10th cycle; Processor B: 7th cycle
+
+Q4)
+Two possible answers:
+(i) hardware oriented design change: Intel Pentium processor (https://www.researchgate.net/profile/Donald_Alpert/publication/3214681_Architecture_of_the_Pentium_Microprocessor/links/54187f300cf203f155adafc1/Architecture-of-the-Pentium-Microprocessor.pdf ; pages 3 and 4 in particular)
+(ii) software oriented design change: Very Long Instruction Word (VLIW) processors
+
